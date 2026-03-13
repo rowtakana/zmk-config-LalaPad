@@ -4,7 +4,7 @@
 #include "lalapad-layouts.dtsi"
 
 / {
-    chosen {
+    chosen {ta
         zmk,physical-layout = &lalapad_physical_layout;
     };
 
@@ -108,7 +108,7 @@
         dr-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "2x";
-        no-taps;
+        // no-taps;
         no-smoothing;
         //absolute-mode;
     };

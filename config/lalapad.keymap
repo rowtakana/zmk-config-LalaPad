@@ -22,14 +22,16 @@
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         <&zip_xy_scaler 3 2>;
-        //<&zip_temp_layer MOUSE_R_LAYER 500>;
+
+    //<&zip_temp_layer MOUSE_R_LAYER 500>;
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_scaler 3 5>;
-            //<&zip_temp_layer MOUSE_R_LAYER 500>;
+
+        //<&zip_temp_layer MOUSE_R_LAYER 500>;
     };
 
     scroller {
@@ -240,11 +242,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&lt 4 ESCAPE  &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y          &kp U        &kp I                     &kp O         &kp P          &mt EQUAL MINUS
-&kp LCTRL     &kp A         &kp S         &kp D            &lt 3 F      &kp G          &kp H          &kp J        &kp K                     &kp L         &kp SEMICOLON  &kp DOUBLE_QUOTES
-&kp LSHFT     &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N          &kp M        &kp COMMA                 &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
-&kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE      &lt 2 F15    &lt 4 AT_SIGN  &kp A          &lt 2 ENTER  &mt LEFT_SHIFT BACKSPACE  &kp LEFT_GUI  &kp A          &kp A
-                            &allow_end    &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home  &allow_pagedown           &allow_end
+&lt 4 ESCAPE  &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y          &kp U        &kp I                 &kp O         &kp P          &mt EQUAL MINUS
+&kp LCTRL     &mt LSHIFT A  &kp S         &kp D            &lt 3 F      &kp G          &kp H          &kp J        &kp K                 &kp L         &kp SEMICOLON  &kp DOUBLE_QUOTES
+&kp LSHFT     &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N          &kp M        &kp COMMA             &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
+&kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE      &lt 2 F15    &lt 4 AT_SIGN  &kp A          &lt 2 ENTER  &mt LSHIFT BACKSPACE  &kp LEFT_GUI  &kp A          &kp A
+                            &allow_end    &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home  &allow_pagedown       &allow_end
             >;
         };
 

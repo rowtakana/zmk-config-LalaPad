@@ -213,7 +213,7 @@
 
         pacent {
             bindings = <&kp PERCENT>;
-            key-positions = <14 15 16>;
+            key-positions = <19 20 21>;
         };
 
         equal {
@@ -224,6 +224,11 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <9 10>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <31 32 33>;
         };
     };
 

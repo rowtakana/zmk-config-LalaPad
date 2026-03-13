@@ -185,6 +185,46 @@
             bindings = <&kp AMPERSAND>;
             key-positions = <16 15>;
         };
+
+        ast {
+            bindings = <&kp ASTERISK>;
+            key-positions = <16 19>;
+        };
+
+        lkako {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <27 28>;
+        };
+
+        rkako {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <31 32>;
+        };
+
+        bikkuri {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <1 2>;
+        };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <2 3 4>;
+        };
+
+        pacent {
+            bindings = <&kp PERCENT>;
+            key-positions = <14 15 16>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <19 20>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <9 10>;
+        };
     };
 
     keymap {
@@ -195,11 +235,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&lt 4 ESCAPE  &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y          &kp U        &kp I            &kp O       &kp P           &mt EQUAL MINUS
-&kp TAB       &kp A         &kp S         &kp D            &lt 3 F      &kp G          &kp H          &kp J        &kp K            &kp L       &mt2 SEMI LBKT  &mt2 SQT RBKT
-&kp LSHFT     &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N          &kp M        &kp COMMA        &kp PERIOD  &kp SLASH       &kp BSLH
-&kp LCTRL     &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE      &lt 2 F15    &kp A          &kp A          &lt 2 ENTER  &kp RET          &kp LEFT    &kp DOWN        &kp RIGHT
-                            &allow_end    &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
+&lt 4 ESCAPE  &kp Q         &kp W         &kp E            &kp R        &kp T          &kp Y          &kp U        &kp I                     &kp O         &kp P          &mt EQUAL MINUS
+&kp LCTRL     &kp A         &kp S         &kp D            &lt 3 F      &kp G          &kp H          &kp J        &kp K                     &kp L         &kp SEMICOLON  &kp DOUBLE_QUOTES
+&kp LSHFT     &kp Z         &kp X         &kp C            &kp V        &kp B          &kp N          &kp M        &kp COMMA                 &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
+&kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE      &lt 2 F15    &lt 4 AT_SIGN  &kp A          &lt 2 ENTER  &mt LEFT_SHIFT BACKSPACE  &kp LEFT_GUI  &kp A          &kp A
+                            &allow_end    &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home  &allow_pagedown           &allow_end
             >;
         };
 
@@ -208,10 +248,10 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp DEL  &kp F4     &kp LC(W)  &kp LG(E)     &kp LC(R)  &kp LC(T)           &trans                &kp PAGE_UP       &kp UP_ARROW       &kp PAGE_DOWN  &trans   &trans
+&kp DEL  &kp F4     &kp LC(W)  &kp LG(E)     &kp LC(R)  &kp LC(T)           &kp GRAVE             &kp PAGE_UP       &kp UP_ARROW       &kp PAGE_DOWN  &trans   &trans
 &trans   &kp LC(A)  &kp LC(S)  &kp LEFT_ALT  &kp TAB    &kp ESCAPE          &kp HOME              &kp LEFT          &kp DOWN           &kp RIGHT      &kp END  &trans
 &trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)     &kp LC(V)  &kp K_CONTEXT_MENU  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans         &trans   &trans
-&trans   &trans     &trans     &trans        &trans     &kp CAPS            &trans                &trans            &trans             &trans         &trans   &trans
+&trans   &trans     &trans     &trans        &trans     &kp AT_SIGN         &kp CARET             &trans            &trans             &trans         &trans   &trans
                     &trans     &trans        &trans     &trans              &trans                &trans            &trans             &trans
             >;
         };
@@ -221,7 +261,7 @@
 &trans  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
 &trans  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
-&trans  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
+&trans  &trans           &trans           &trans           &trans           &trans           &trans           &kp LEFT_GUI     &trans           &trans           &trans           &trans
                          &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
             >;
         };

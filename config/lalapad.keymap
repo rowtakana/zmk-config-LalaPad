@@ -178,6 +178,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        and {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <16 15>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

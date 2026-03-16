@@ -288,11 +288,11 @@
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
 
             bindings = <
-&kp ESCAPE    &kp Q          &kp W         &kp E            &kp R           &kp T               &kp Y          &kp U        &kp I                  &kp O         &kp P          &mt EQUAL MINUS
-&kp LCTRL     &mt2 LSHIFT A  &kp S         &kp D            &lt 3 F         &kp G               &kp H          &kp J        &kp K                  &kp L         &kp SEMICOLON  &kp PLUS
-&kp LSHFT     &kp Z          &kp X         &kp C            &kp V           &kp B               &kp N          &kp M        &kp COMMA              &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
-&kp LEFT_ALT  &kp LEFT_WIN   &kp LEFT_ALT  &lt 1 SPACE      &mt2 LCTRL F15  &lt 2 SINGLE_QUOTE  &kp AT_SIGN    &lt 2 ENTER  &mt2 LSHIFT BACKSPACE  &kp LEFT_GUI  &to 5          &kp A
-                             &allow_end    &allow_pagedown  &allow_home     &allow_pageup       &allow_pageup  &allow_home  &allow_pagedown        &allow_end
+&kp ESCAPE    &kp Q          &kp W         &kp E            &kp R           &kp T               &kp Y          &kp U        &kp I                 &kp O         &kp P          &mt EQUAL MINUS
+&kp LCTRL     &mt2 LSHIFT A  &kp S         &kp D            &lt 3 F         &kp G               &kp H          &kp J        &kp K                 &kp L         &kp SEMICOLON  &kp PLUS
+&kp LSHFT     &kp Z          &kp X         &kp C            &kp V           &kp B               &kp N          &kp M        &kp COMMA             &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
+&kp LEFT_ALT  &kp LEFT_WIN   &kp LEFT_ALT  &lt 1 SPACE      &mt2 LCTRL F15  &lt 2 SINGLE_QUOTE  &kp AT_SIGN    &lt 2 ENTER  &mt LSHIFT BACKSPACE  &kp LEFT_GUI  &to 5          &kp A
+                             &lt 2 RIGHT   &allow_pagedown  &allow_home     &allow_pageup       &allow_pageup  &allow_home  &allow_pagedown       &allow_end
             >;
         };
 

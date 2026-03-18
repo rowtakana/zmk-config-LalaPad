@@ -29,6 +29,10 @@
     tap-detection;
     prevent_movement_during_tap;
     circular-scroll;
+    // すべての1本指タップを左クリック(0x01)に固定します
+    one-finger-tap-button = <0x01>;
+    // もし「2本指タップ」で右クリックしたい場合は以下も追加
+    two-finger-tap-button = <0x02>;
 };
 
 / {

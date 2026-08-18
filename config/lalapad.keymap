@@ -280,6 +280,43 @@
         };
     };
 
+    macros {
+        ipad: ipad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 5>;
+            label = "IPAD";
+        };
+
+        Windows1: Windows1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 0>;
+            label = "WINDOWS1";
+        };
+
+        Windows2: Windows2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &to 0>;
+            label = "WINDOWS2";
+        };
+
+        Windows3: Windows3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3 &to 0>;
+            label = "WINDOWS3";
+        };
+
+        Windows4: Windows4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 0>;
+            label = "WINDOWS4";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -311,7 +348,7 @@
 
         layer_2 {
             bindings = <
-&trans  &trans           &trans           &trans           &trans           &trans           &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &bt BT_CLR
+&trans  &trans           &trans           &trans           &trans           &trans           &ipad            &Windows1        &Windows2        &Windows3        &Windows4        &bt BT_CLR
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
 &trans  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
 &trans  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans

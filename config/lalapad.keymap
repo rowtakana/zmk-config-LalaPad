@@ -284,35 +284,35 @@
         ipad: ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 4>;
+            bindings = <&bt BT_SEL 0 &to 0>;
             label = "IPAD";
         };
 
         Windows1: Windows1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 0>;
+            bindings = <&bt BT_SEL 1 &to 2>;
             label = "WINDOWS1";
         };
 
         Windows2: Windows2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 0>;
+            bindings = <&bt BT_SEL 2 &to 2>;
             label = "WINDOWS2";
         };
 
         Windows3: Windows3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 0>;
+            bindings = <&bt BT_SEL 3 &to 2>;
             label = "WINDOWS3";
         };
 
         Windows4: Windows4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &to 0>;
+            bindings = <&bt BT_SEL 4 &to 2>;
             label = "WINDOWS4";
         };
     };
@@ -320,16 +320,36 @@
     keymap {
         compatible = "zmk,keymap";
 
+        layer_5 {
+            bindings = <
+&kp ESC       &kp Q         &kp W              &kp E           &kp R              &kp T                 &kp Y          &kp U        &kp I                     &kp O       &kp P      &kp MINUS
+&kp LCMD      &kp A         &kp S              &lt 6 D         &lt 5 F            &kp G                 &kp H          &kp J        &kp K                     &kp L       &kp SEMI   &kp APOS
+&kp LSHFT     &kp Z         &kp X              &kp C           &kp V              &kp B                 &kp N          &kp M        &kp COMMA                 &kp DOT     &kp FSLH   &kp RSHFT
+&kp LEFT_ALT  &kp LEFT_ALT  &kp LEFT_ALT       &lt 1 SPACE     &mt LEFT_GUI CLCK  &kp NON_US_BACKSLASH  &kp AT_SIGN    &lt 4 ENTER  &mt LEFT_SHIFT BACKSPACE  &kp LCTRL   &kp LCTRL  &kp LCTRL
+                            &lt 4 RIGHT_ARROW  &kp DOWN_ARROW  &kp LEFT_ARROW     &kp UP_ARROW          &allow_pageup  &allow_home  &allow_pagedown           &allow_end
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&kp DELETE  &trans     &trans     &trans     &trans     &trans      &kp GRAVE             &kp PAGE_UP       &kp UP_ARROW       &kp PAGE_DOWN    &trans   &trans
+&trans      &kp LG(A)  &kp LG(S)  &trans     &kp TAB    &kp ESCAPE  &kp HOME              &kp LEFT_ARROW    &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp END  &trans
+&trans      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans      &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans           &trans   &trans
+&trans      &trans     &trans     &trans     &trans     &kp DOLLAR  &kp CARET             &trans            &trans             &trans           &trans   &trans
+                       &trans     &trans     &trans     &trans      &trans                &trans            &trans             &trans
+            >;
+        };
+
         DEFAULT_LAYER {
             display-name = "Default";
             sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
 
             bindings = <
 &kp ESCAPE    &kp Q         &kp W         &kp E            &kp R          &kp T                 &kp Y          &kp U        &kp I                 &kp O         &kp P          &kp MINUS
-&kp LCTRL     &mt2 LCTRL A  &kp S         &lt 3 D          &lt 2 F        &kp G                 &kp H          &kp J        &kp K                 &kp L         &kp SEMICOLON  &kp SQT
+&kp LCTRL     &mt2 LCTRL A  &kp S         &lt 6 D          &lt 5 F        &kp G                 &kp H          &kp J        &kp K                 &kp L         &kp SEMICOLON  &kp SQT
 &kp LSHFT     &kp Z         &kp X         &kp C            &kp V          &kp B                 &kp N          &kp M        &kp COMMA             &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
-&kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE      &mt LCTRL F15  &kp NON_US_BACKSLASH  &kp AT_SIGN    &lt 6 ENTER  &mt LSHIFT BACKSPACE  &kp LEFT_GUI  &kp LEFT_GUI   &lt 2 LEFT_GUI
-                            &lt 6 RIGHT   &allow_pagedown  &allow_home    &allow_pageup         &allow_pageup  &allow_home  &allow_pagedown       &allow_end
+&kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE      &mt LCTRL F15  &kp NON_US_BACKSLASH  &kp AT_SIGN    &lt 4 ENTER  &mt LSHIFT BACKSPACE  &kp LEFT_GUI  &kp LEFT_GUI   &lt 5 LEFT_GUI
+                            &lt 4 RIGHT   &allow_pagedown  &allow_home    &allow_pageup         &allow_pageup  &allow_home  &allow_pagedown       &allow_end
             >;
         };
 
@@ -343,6 +363,16 @@
 &trans   &kp LC(Z)  &kp LC(X)  &kp LC(C)     &kp LC(V)  &kp K_CONTEXT_MENU  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &trans         &trans   &trans
 &trans   &trans     &trans     &trans        &trans     &kp DOLLAR          &kp CARET             &mt LEFT_GUI ENTER  &trans             &trans         &trans   &trans
                     &trans     &trans        &trans     &trans              &trans                &trans              &trans             &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&bt BT_CLR      &Windows4        &Windows3        &Windows2        &Windows1        &ipad            &ipad            &Windows1        &Windows2        &Windows3        &Windows4        &bt BT_CLR
+&trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
+&trans          &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
+&bt BT_CLR_ALL  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
+                                 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
             >;
         };
 
@@ -363,36 +393,6 @@
 &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans  &trans  &trans
 &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans  &trans  &trans
                 &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&kp ESC       &kp Q         &kp W              &kp E           &kp R              &kp T                 &kp Y          &kp U        &kp I                     &kp O       &kp P      &kp MINUS
-&kp LCMD      &kp A         &kp S              &lt 3 D         &lt 2 F            &kp G                 &kp H          &kp J        &kp K                     &kp L       &kp SEMI   &kp APOS
-&kp LSHFT     &kp Z         &kp X              &kp C           &kp V              &kp B                 &kp N          &kp M        &kp COMMA                 &kp DOT     &kp FSLH   &kp RSHFT
-&kp LEFT_ALT  &kp LEFT_ALT  &kp LEFT_ALT       &lt 5 SPACE     &mt LEFT_GUI CLCK  &kp NON_US_BACKSLASH  &kp AT_SIGN    &lt 6 ENTER  &mt LEFT_SHIFT BACKSPACE  &kp LCTRL   &kp LCTRL  &kp LCTRL
-                            &lt 6 RIGHT_ARROW  &kp DOWN_ARROW  &kp LEFT_ARROW     &kp UP_ARROW          &allow_pageup  &allow_home  &allow_pagedown           &allow_end
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&kp DELETE  &trans     &trans     &trans     &trans     &trans      &kp GRAVE             &kp PAGE_UP       &kp UP_ARROW       &kp PAGE_DOWN    &trans   &trans
-&trans      &kp LG(A)  &kp LG(S)  &trans     &kp TAB    &kp ESCAPE  &kp HOME              &kp LEFT_ARROW    &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp END  &trans
-&trans      &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans      &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans           &trans   &trans
-&trans      &trans     &trans     &trans     &trans     &kp DOLLAR  &kp CARET             &trans            &trans             &trans           &trans   &trans
-                       &trans     &trans     &trans     &trans      &trans                &trans            &trans             &trans
-            >;
-        };
-
-        layer_2 {
-            bindings = <
-&bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &trans           &ipad            &Windows1        &Windows2        &Windows3        &Windows4        &bt BT_CLR
-&trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans
-&trans          &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
-&bt BT_CLR_ALL  &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
-                                 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
             >;
         };
     };
